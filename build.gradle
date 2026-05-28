@@ -7,18 +7,15 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+	maven { url = 'https://maven.shedaniel.me/' }
+	maven { url = 'https://maven.terraformersmc.com/releases/' }
 }
 
 loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"coordsonscreen" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
@@ -34,7 +31,15 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	
+
+	// Cloth Config — provides the config screen API and AutoConfig persistence layer
+	implementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+
+	// ModMenu — wires the config screen into the in-game mod list.
+	// On the client runtime classpath so it loads in dev; not bundled into the
+	// published jar (no `include`), so end users supply ModMenu themselves.
+	clientImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+
 }
 
 processResources {

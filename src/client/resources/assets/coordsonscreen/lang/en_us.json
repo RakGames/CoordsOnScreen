@@ -1,0 +1,18 @@
+{
+  "config.coordsonscreen.title": "CoordsOnScreen Settings",
+  "config.coordsonscreen.category.display": "Display",
+  "config.coordsonscreen.position": "HUD Position",
+  "config.coordsonscreen.position.tooltip": "The corner of the screen where coordinates are displayed.",
+  "config.coordsonscreen.position.top_left": "Top Left",
+  "config.coordsonscreen.position.top_right": "Top Right",
+  "config.coordsonscreen.position.bottom_left": "Bottom Left",
+  "config.coordsonscreen.position.bottom_right": "Bottom Right",
+  "config.coordsonscreen.x_padding": "Horizontal Padding",
+  "config.coordsonscreen.x_padding.tooltip": "Horizontal offset from the screen edge in pixels.",
+  "config.coordsonscreen.y_padding": "Vertical Padding",
+  "config.coordsonscreen.y_padding.tooltip": "Vertical offset from the screen edge in pixels.",
+  "config.coordsonscreen.show_main_coords": "Show Main Coordinates",
+  "config.coordsonscreen.show_main_coords.tooltip": "Toggles the current dimension's coordinate display.",
+  "config.coordsonscreen.show_alt_coords": "Show Alternative Coordinates",
+  "config.coordsonscreen.show_alt_coords.tooltip": "Toggles the secondary bracketed equivalent coordinates."
+}
