@@ -18,6 +18,12 @@ public class CoordsConfig implements ConfigData {
     @ConfigEntry.BoundedDiscrete(min = 0, max = 200)
     public int yPadding = 5;
 
+    // On-screen text size as a percentage, independent of the GUI Scale setting.
+    // 100% renders at the same size as GUI Scale 2 and stays constant regardless
+    // of the player's actual GUI Scale.
+    @ConfigEntry.BoundedDiscrete(min = 50, max = 300)
+    public int fontSizePercent = 100;
+
     public boolean showMainCoords = true;
     public boolean showAltCoords = true;
 

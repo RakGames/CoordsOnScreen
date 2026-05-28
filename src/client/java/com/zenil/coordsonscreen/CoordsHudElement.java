@@ -35,16 +35,27 @@ public final class CoordsHudElement implements HudElement {
         int px = config.xPadding;
         int py = config.yPadding;
 
-        int drawX = switch (config.position) {
+        // Counter-scale by the GUI scale so the chosen size is a fixed on-screen
+        // size: physical height = textHeight * guiScale * scale stays constant.
+        int guiScale = Math.max(1, mc.getWindow().getGuiScale());
+        float scale = config.fontSizePercent / (50f * guiScale);
+        float scaledWidth = textWidth * scale;
+        float scaledHeight = textHeight * scale;
+
+        float drawX = switch (config.position) {
             case TOP_LEFT, BOTTOM_LEFT -> px;
-            case TOP_RIGHT, BOTTOM_RIGHT -> screenW - textWidth - px;
+            case TOP_RIGHT, BOTTOM_RIGHT -> screenW - scaledWidth - px;
         };
-        int drawY = switch (config.position) {
+        float drawY = switch (config.position) {
             case TOP_LEFT, TOP_RIGHT -> py;
-            case BOTTOM_LEFT, BOTTOM_RIGHT -> screenH - textHeight - py;
+            case BOTTOM_LEFT, BOTTOM_RIGHT -> screenH - scaledHeight - py;
         };
 
-        graphics.text(font, line, drawX, drawY, 0xFFFFFFFF, true);
+        graphics.pose().pushMatrix();
+        graphics.pose().translate(drawX, drawY);
+        graphics.pose().scale(scale, scale);
+        graphics.text(font, line, 0, 0, 0xFFFFFFFF, true);
+        graphics.pose().popMatrix();
     }
 
     private static MutableComponent buildLine(

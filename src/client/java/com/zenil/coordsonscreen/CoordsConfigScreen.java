@@ -53,6 +53,16 @@ public final class CoordsConfigScreen {
             .build());
 
         display.addEntry(entry
+            .startIntSlider(
+                Component.translatable("config.coordsonscreen.font_size"),
+                config.fontSizePercent, 50, 300)
+            .setDefaultValue(100)
+            .setTextGetter(v -> Component.literal(v + "%"))
+            .setTooltip(Component.translatable("config.coordsonscreen.font_size.tooltip"))
+            .setSaveConsumer(v -> config.fontSizePercent = v)
+            .build());
+
+        display.addEntry(entry
             .startBooleanToggle(
                 Component.translatable("config.coordsonscreen.show_main_coords"),
                 config.showMainCoords)

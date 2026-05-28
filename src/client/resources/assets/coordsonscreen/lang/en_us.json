@@ -11,6 +11,8 @@
   "config.coordsonscreen.x_padding.tooltip": "Horizontal offset from the screen edge in pixels.",
   "config.coordsonscreen.y_padding": "Vertical Padding",
   "config.coordsonscreen.y_padding.tooltip": "Vertical offset from the screen edge in pixels.",
+  "config.coordsonscreen.font_size": "Text Size",
+  "config.coordsonscreen.font_size.tooltip": "On-screen size of the coordinates, independent of the GUI Scale setting. 100% matches GUI Scale 2 and stays the same size no matter your GUI Scale.",
   "config.coordsonscreen.show_main_coords": "Show Main Coordinates",
   "config.coordsonscreen.show_main_coords.tooltip": "Toggles the current dimension's coordinate display.",
   "config.coordsonscreen.show_alt_coords": "Show Alternative Coordinates",
