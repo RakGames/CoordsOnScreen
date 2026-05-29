@@ -26,6 +26,9 @@ public class CoordsConfig implements ConfigData {
 
     public boolean showMainCoords = true;
     public boolean showAltCoords = true;
+    public boolean showBiome = true;
+    public boolean useBiomeColor = true;
+    public boolean showStructure = true;
 
     public enum HudPosition {
         TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+- Added a **biome display** on its own line (toggleable): below the coordinates when the HUD is at the top of the screen, above them when it's at the bottom.
+- The biome name is **colored to fit the biome** via a curated palette (oceans blue/teal, beaches sandy, deserts tan, jungles vivid green, swamps murky, and so on); modded biomes fall back to their grass color. This can be toggled off for plain white.
+- Added a **structure display** (toggleable) that shows the structure you're standing in, such as Stronghold or Ancient City. Singleplayer only — multiplayer servers don't send structure data to the client.
+- The biome line is hidden in the End, which is effectively a single biome.
+
 ## 1.0.1
 - Added a **Text Size** option that sets the on-screen size of the coordinates independently of the GUI Scale setting — the text stays the same size no matter the player's GUI Scale.
 

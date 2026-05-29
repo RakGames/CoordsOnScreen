@@ -16,5 +16,11 @@
   "config.coordsonscreen.show_main_coords": "Show Main Coordinates",
   "config.coordsonscreen.show_main_coords.tooltip": "Toggles the current dimension's coordinate display.",
   "config.coordsonscreen.show_alt_coords": "Show Alternative Coordinates",
-  "config.coordsonscreen.show_alt_coords.tooltip": "Toggles the secondary bracketed equivalent coordinates."
+  "config.coordsonscreen.show_alt_coords.tooltip": "Toggles the secondary bracketed equivalent coordinates.",
+  "config.coordsonscreen.show_biome": "Show Biome",
+  "config.coordsonscreen.show_biome.tooltip": "Shows the current biome name on its own line: below the coordinates when the HUD is at the top of the screen, above them when it is at the bottom.",
+  "config.coordsonscreen.biome_color": "Color Biome Name",
+  "config.coordsonscreen.biome_color.tooltip": "Tints the biome name with a color that fits the biome. When off, the biome name is shown in white.",
+  "config.coordsonscreen.show_structure": "Show Structure",
+  "config.coordsonscreen.show_structure.tooltip": "Shows the structure you are currently standing in (e.g. Stronghold, Ancient City). Singleplayer only — servers do not send structure data to the client."
 }

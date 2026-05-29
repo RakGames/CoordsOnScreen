@@ -80,6 +80,33 @@ public final class CoordsConfigScreen {
             .setSaveConsumer(v -> config.showAltCoords = v)
             .build());
 
+        display.addEntry(entry
+            .startBooleanToggle(
+                Component.translatable("config.coordsonscreen.show_biome"),
+                config.showBiome)
+            .setDefaultValue(true)
+            .setTooltip(Component.translatable("config.coordsonscreen.show_biome.tooltip"))
+            .setSaveConsumer(v -> config.showBiome = v)
+            .build());
+
+        display.addEntry(entry
+            .startBooleanToggle(
+                Component.translatable("config.coordsonscreen.biome_color"),
+                config.useBiomeColor)
+            .setDefaultValue(true)
+            .setTooltip(Component.translatable("config.coordsonscreen.biome_color.tooltip"))
+            .setSaveConsumer(v -> config.useBiomeColor = v)
+            .build());
+
+        display.addEntry(entry
+            .startBooleanToggle(
+                Component.translatable("config.coordsonscreen.show_structure"),
+                config.showStructure)
+            .setDefaultValue(true)
+            .setTooltip(Component.translatable("config.coordsonscreen.show_structure.tooltip"))
+            .setSaveConsumer(v -> config.showStructure = v)
+            .build());
+
         return builder.build();
     }
 }
