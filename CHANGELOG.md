@@ -3,13 +3,15 @@
 > **Builds are published per Minecraft version**, named `mc<mc_version>_<mod_version>` (e.g. `coordsonscreen-mc26.2_1.2.0.jar`). The version headings below describe the feature set; the same mod version may be released for more than one Minecraft version so popular modded MC versions stay supported.
 
 ## 1.2.0
-*Supported Minecraft versions: 26.2, 26.1.2.*
+*Supported Minecraft versions: 26.3, 26.2, 26.1.2.*
 - The mod now has its own config file handling, so **Cloth Config is no longer required**. Settings live in `config/coordsonscreen.json` and can be edited by hand; missing fields fall back to defaults and out-of-range values are clamped automatically.
 - **Cloth Config and ModMenu are now optional** — they're only needed for the in-game settings screen. Without them, the mod still loads and is fully configurable via the file.
 - If ModMenu is installed but Cloth Config isn't, the Configure button is simply hidden instead of erroring.
 - **Minecraft 26.2 build** (`mc26.2_1.2.0`): rebuilt against Minecraft 26.2 with Fabric Loader 0.19.3, Fabric API 0.153.0+26.2, Cloth Config 26.2.155, and ModMenu 20.0.0-beta.4. No feature changes — same 1.2.0 feature set. The 26.2 build requires Minecraft 26.2 and does not load on 26.1.2; use the `mc26.1.2_1.2.0` build for 26.1.2.
 - Build toolchain updated to the stable **Fabric Loom 1.17.13** (previously the 1.16 snapshot line) and **Gradle 9.6.1**. No effect on the shipped jar's behavior.
 - Dev/build dependencies refreshed for the 26.2 target: **Fabric API 0.155.2+26.2** and **ModMenu 20.0.1** (first stable ModMenu for 26.2, up from 20.0.0-beta.4). No feature changes.
+- **Minecraft 26.3 build** (`mc26.3_1.2.0`): rebuilt against Minecraft 26.3 with Fabric Loader 0.19.5, Fabric API 0.161.0+26.3, Cloth Config 26.3.159, and ModMenu 21.0.0. Same 1.2.0 feature set. Minecraft 26.3 changed the structure lookup API, so the structure display was updated to the new call; behavior is unchanged. The 26.3 build requires Minecraft 26.3 and does not load on other versions; use `mc26.2_1.2.0` for 26.2 and `mc26.1.2_1.2.0` for 26.1.2.
+- Build toolchain updated to **Fabric Loom 1.18.2** and **Gradle 9.8.0** (development only; no effect on the shipped jar). The 26.3 development client crashed on startup under Loom 1.17.13, so 26.3 needs the newer Loom.
 
 ## 1.1.1
 - Modded biomes now display a clean prettified name when the mod ships no translation key (e.g. `biome.mymod.crystal_forest` → "Crystal Forest"), and modded translations are honored when present.

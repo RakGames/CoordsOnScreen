@@ -173,7 +173,7 @@ public final class CoordsHudElement implements HudElement {
 
             Registry<Structure> registry = server.registryAccess().lookup(Registries.STRUCTURE).orElseThrow();
             for (Structure structure : structures.keySet()) {
-                StructureStart start = structureManager.getStructureWithPieceAt(pos, structure);
+                StructureStart start = structureManager.getStructureWithPieceAt(pos.getX(), pos.getY(), pos.getZ(), structure);
                 if (start != null && start.isValid()) {
                     Identifier id = registry.getKey(structure);
                     MutableComponent line;
